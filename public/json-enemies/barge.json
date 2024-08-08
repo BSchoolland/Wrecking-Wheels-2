@@ -1,0 +1,32 @@
+{
+    "blocks": [
+      { "type": "BasicWoodenBlock", "x": 125, "y": 775, "flippedX": false },
+      { "type": "BasicWoodenBlock", "x": 175, "y": 775, "flippedX": false },
+      { "type": "BasicWoodenBlock", "x": 225, "y": 775, "flippedX": false },
+      { "type": "BasicWoodenBlock", "x": 275, "y": 775, "flippedX": false },
+      { "type": "BasicWoodenBlock", "x": 325, "y": 775, "flippedX": false },
+      { "type": "BasicWoodenBlock", "x": 325, "y": 725, "flippedX": false },
+      { "type": "BasicWoodenBlock", "x": 325, "y": 675, "flippedX": false },
+      { "type": "BasicWoodenBlock", "x": 275, "y": 675, "flippedX": false },
+      { "type": "BasicWoodenBlock", "x": 225, "y": 675, "flippedX": false },
+      { "type": "BasicWoodenBlock", "x": 175, "y": 675, "flippedX": false },
+      { "type": "BasicWoodenBlock", "x": 125, "y": 675, "flippedX": false },
+      { "type": "BasicWoodenBlock", "x": 75, "y": 675, "flippedX": false },
+      { "type": "BasicWoodenBlock", "x": 125, "y": 725, "flippedX": false },
+      { "type": "SeatBlock", "x": 225, "y": 725, "flippedX": false },
+      { "type": "WheelBlock", "x": 275, "y": 825, "flippedX": false },
+      { "type": "WheelBlock", "x": 175, "y": 825, "flippedX": false },
+      { "type": "BasicWoodenBlock", "x": 125, "y": 825, "flippedX": false },
+      { "type": "WheelBlock", "x": 325, "y": 825, "flippedX": false },
+      { "type": "WheelBlock", "x": 225, "y": 825, "flippedX": false }
+    ],
+    "commands": [
+      { "key": "d", "start": 6.0, "end": 15.0},
+      { "key": "a", "start": 17, "end": 26},
+      { "key": "d", "start": 33, "end": 42},
+      { "key": "a", "start": 45, "end": 54},
+      { "key": "d", "start": 60, "end": 69},
+      { "key": "a", "start": 72, "end": 9999}
+    ]
+  }
+  

@@ -1,0 +1,6 @@
+# the gitignore
+node_modules/
+nohup.out
+userActivity.log
+database.db
+.env

@@ -1,0 +1,208 @@
+body {
+    overflow: hidden;
+    /* set the background as a single image covering the entire screen */
+    background-image:  url(../img/background.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    perspective: 1000px; /*  perspective for 3D effect */
+}
+
+
+/* Parent container for the progress bar */
+.progress-bar-parent {
+    width: 50%;
+    margin: 40vh auto; /* center the progress bar */
+    
+}
+
+.progress-bar {
+    background-color: #0300c5; /* background color of the progress bar */
+    border-radius: 5px; /* rounded corners */
+    width: 0; /* initial width, will be updated by JavaScript */
+    height: 20px; /* height of the progress bar */
+    color: white; /* color of the text */
+    text-align: center; /* center the text */
+    line-height: 20px; /* align the text vertically */
+    
+}
+
+.progress-bar-container {
+    width: 100%; /* full width */
+    background-color: #ddd; /* background color of the container */
+    color: black; /* color of the text */
+    padding: 3px;
+    border-radius: 5px; /* rounded corners */
+}
+.progress-bar-text-container {
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center; /* center vertically */
+    height: 100%; /* take full height of the parent */
+}
+.progress-bar-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    /* display in the center */
+}
+
+.back-arrow { 
+    /* an image */
+    position: absolute;
+    top: 5%;
+    left: 3%;
+    width: 50px;
+    height: 50px;
+}
+
+.back-arrow:hover {
+    /* change the color on hover */
+    filter: invert(100%);
+    cursor: pointer;
+}
+
+/* Style for the right-click menu container */
+.right-click-menu {
+    background-color: #1a3a5f; /* Dark blue background */
+    border: 1px solid #557da6; /* Lighter blue border */
+    color: #e4e8ec; /* Light text color */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    font-family: 'Courier New', monospace; /* Font that gives a typewritten or technical feel */
+    text-align: center; /* Center align the content */
+}
+
+/* Style for each button in the menu */
+.right-click-menu-button {
+    background-color: #2b5572; /* Slightly lighter blue for buttons */
+    color: #e4e8ec; /* Light text color for contrast */
+    border: none;
+    padding: 5px 10px;
+    margin: 10px 0; /* Adjusted margin for vertical stacking */
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-transform: uppercase; /* Makes text uppercase for a more formal look */
+    font-weight: bold;
+    display: block; /* Make buttons block-level elements */
+    width: 100%; /* Adjust the width as needed */
+    margin-left: auto; /* Auto margins for horizontal centering */
+    margin-right: auto;
+}
+
+.right-click-menu-button:hover {
+    background-color: #3b6f92; /* Change background on hover for interactive feel */
+}
+
+
+
+
+.world-select-menu {
+    background-color: #1a3a5f; /* Dark blue background */
+    border: 1px solid #557da6; /* Lighter blue border */
+    color: #e4e8ec; /* Light text color */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1); 
+    font-family: 'Courier New', monospace; /* Font that gives a typewritten or technical feel */
+    /* organize items into rows of 3 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 5%;
+}
+
+.world-select-button {
+    background-color: #2b5572; /* Slightly lighter blue for buttons */
+    color: #e4e8ec; /* Light text color for contrast */
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 25px;
+    margin-right: 25px;
+    transition: background-color 0.3s;
+    text-transform: uppercase; /* Makes text uppercase for a more formal look */
+    font-weight: bold;
+}
+/* world select button when it is selected */
+.selected {
+    background-color: #d4af37; /* Goldish color */
+    border: 2px solid #f5deb3; /* Lighter gold border */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    color: #1a3a5f; /* Dark text color for contrast */
+}
+
+.level-select-menu {
+    position: absolute;
+    top: 5%; 
+    left: 50%;
+    transform: translateX(-50%); /* Center the div horizontally */
+    background-color: #1a3a5f; /* Dark blue background */
+    border: 1px solid #557da6; /* Lighter blue border */
+    color: #e4e8ec; /* Light text color */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1); 
+    font-family: 'Courier New', monospace; /* Font that gives a typewritten or technical feel */
+    /* organize items into rows of 3 */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+    overflow: auto;
+}
+
+/* .level-select-image {
+    width: 100%;
+    height: auto;
+    margin: 0 0;
+    border-radius: 3px;
+} */
+
+
+
+.allowed-block-menu {
+    position: absolute;
+    top: 5%; 
+    left: 5%;
+    background-color: #1a3a5f; /* Dark blue background */
+    border: 1px solid #557da6; /* Lighter blue border */
+    color: #e4e8ec; /* Light text color */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1); 
+    font-family: 'Courier New', monospace; /* Font that gives a typewritten or technical feel */
+    /* organize items into rows of 3 */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    height: 70%;
+    overflow: auto;
+}
+
+.objectives-menu {
+    position: absolute;
+    top: 5%; 
+    right: 5%;
+    background-color: #1a3a5f; /* Dark blue background */
+    border: 1px solid #557da6; /* Lighter blue border */
+    color: #e4e8ec; /* Light text color */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1); 
+    font-family: 'Courier New', monospace; /* Font that gives a typewritten or technical feel */
+    /* organize items into rows of 3 */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    height: 70%;
+    overflow: auto;
+}
