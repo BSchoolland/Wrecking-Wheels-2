@@ -96,7 +96,7 @@ soundSlider.addEventListener("input", () => {
   let volume = soundSlider.value / soundSlider.max;
   console.log("Sound volume:", volume);
   
-  setSoundEffectVolume(volume);
+  setSoundEffectVolume(volume, true); // no sound effects on the main menu (because it's annoying)
 });
 
 

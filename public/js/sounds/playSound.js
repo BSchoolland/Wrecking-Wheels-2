@@ -167,10 +167,13 @@ function setMusicVolume(volume) {
   musicGainNode.gain.value = volume;
 }
 
-function setSoundEffectVolume(volume) {
+function setSoundEffectVolume(volume, muteTemporarily = false) {
   // save the new volume to local storage
   localStorage.setItem("soundEffectVolume", volume);
   // update the gain node
+  if (muteTemporarily) {
+    volume = 0;
+  }
   soundGainNode.gain.value = volume / 2; // sound effects are too loud, so divide by 2
 }
 
