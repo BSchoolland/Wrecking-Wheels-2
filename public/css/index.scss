@@ -23,6 +23,9 @@
   padding-left: 20px;
   padding-right: 20px;
   border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  overflow-x: visible;
 }
 
 .index-title-post {
@@ -33,6 +36,13 @@
   height: 24%;
   width: 2.5%;
   background-color: $sign-color;
+}
+
+.version-2 {
+  position:relative;
+  color: rgb(224, 19, 19);
+  font-size: 1.6rem;
+  transform: translateX(30px) rotate(10deg) scale(5);
 }
 
 .index-title {
@@ -133,6 +143,9 @@
     top: 10%;
     transform: translate(-50%, -50%) rotate(3deg);
     padding: 10px;
+    display: flex;
+    flex-direction: row;
+    overflow-x: visible;
   }
 
   .index-title-post {
