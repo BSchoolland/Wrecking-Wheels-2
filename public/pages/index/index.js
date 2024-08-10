@@ -99,6 +99,12 @@ soundSlider.addEventListener("input", () => {
   setSoundEffectVolume(volume, true); // no sound effects on the main menu (because it's annoying)
 });
 
+// set volume initially
+let volume = soundSlider.value / soundSlider.max;
+console.log("Sound volume:", volume);
+
+setSoundEffectVolume(volume, true);
+
 
 // get the orientation of the screen
 let landscape = !window.screen.orientation.type.includes("portrait");
