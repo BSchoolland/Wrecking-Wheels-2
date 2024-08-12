@@ -253,7 +253,7 @@ if (response.ok) {
   window.addEventListener("focus", startInterval);
 }
 
-import LevelHandler from "/js/loaders/levelHandler.js";
+import LevelHandler from "./js/loaders/levelHandler.js";
 // start the level handler (required for syncing data with the server)
 const levelHandler = new LevelHandler();
 
