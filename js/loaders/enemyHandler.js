@@ -4,7 +4,6 @@ class EnemyHandler {
     constructor(progressBar, preLoadEnemies = true) {
         this.enemyContraptionsJSON = {};
         this.progressBar = progressBar;
-        this.enemies = {};
         if (preLoadEnemies){
             this.preLoadEnemies();
         }
@@ -27,24 +26,45 @@ class EnemyHandler {
             'porcupine',
             'yeet',
         ];
-        // Fetch the list of enemies from the API
-        const response = await fetch('/api/enemies');
-        console.log(response);
-        const enemies = await response.json();
-        console.log(enemies);
-        // Load each enemy's JSON data
-        for (const [key, path] of Object.entries(enemies)) {
-            const enemyResponse = await fetch(path);
-            const enemyJson = await enemyResponse.json();
-            this.enemyContraptionsJSON[key] = enemyJson;
+        
+        this.enemyContraptionsJSON = {
+            "barge": "/json-enemies/barge.json",
+            "base": "/json-enemies/base.json",
+            "box": "/json-enemies/box.json",
+            "car": "/json-enemies/car.json",
+            "delayedRocketCar": "/json-enemies/delayedRocketCar.json",
+            "drivingCarL": "/json-enemies/drivingCarL.json",
+            "flameTank": "/json-enemies/flameTank.json",
+            "flierL": "/json-enemies/flierL.json",
+            "largeSpikeCar": "/json-enemies/largeSpikeCar.json",
+            "largeSpikeCarL": "/json-enemies/largeSpikeCarL.json",
+            "metalSpikeCar": "/json-enemies/metalSpikeCar.json",
+            "missileCar": "/json-enemies/missileCar.json",
+            "mortar": "/json-enemies/mortar.json",
+            "movingSpikeWall": "/json-enemies/movingSpikeWall.json",
+            "nuke": "/json-enemies/nuke.json",
+            "porcupine": "/json-enemies/porcupine.json",
+            "rocketCar": "/json-enemies/rocketCar.json",
+            "smackerR": "/json-enemies/smackerR.json",
+            "spikeCar": "/json-enemies/spikeCar.json",
+            "spikeCarUnbalanced": "/json-enemies/spikeCarUnbalanced.json",
+            "tankL": "/json-enemies/tankL.json",
+            "terrifying-bomb-car": "/json-enemies/terrifying-bomb-car.json",
+            "tntBox": "/json-enemies/tntBox.json",
+            "tntTank": "/json-enemies/tntTank.json",
+            "train": "/json-enemies/train.json",
+            "truck": "/json-enemies/truck.json",
+            "volley": "/json-enemies/volley.json",
+            "walker": "/json-enemies/walker.json",
+            "whackerL": "/json-enemies/whackerL.json",
+            "world1Boss": "/json-enemies/world1Boss.json",
+            "world2Boss": "/json-enemies/world2Boss.json",
+            "world3Boss": "/json-enemies/world3Boss.json",
+            "yeet": "/json-enemies/yeet.json"
         }
 
+
         console.log(this.enemyContraptionsJSON)
-
-
-
-
-        this.enemies = enemies
 
         console.log("all enemies preloaded");
         if (this.progressBar) this.progressBar.update();
