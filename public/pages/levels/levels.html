@@ -24,7 +24,6 @@
             }
         }
     </script>
-    <script src="https://sdk.crazygames.com/crazygames-sdk-v3.js"></script>
 
 </head>
 <!-- Google tag (gtag.js) -->
@@ -215,18 +214,7 @@
 
     <!-- runs the matter.js simulation -->
     <script type="module" src="js/game/campaign.js"></script>
-    <script>
-        window.onload = async function() {
-        if (window.self === window.top) {
-            // the page is not on crazygames
-        }
-        else {
-            // the page is in an iframe (likely on crazygames)
-            // init the sdk
-            await window.CrazyGames.SDK.init();
-        }
-    };
-    </script>
+
 </body>
 
 </html>

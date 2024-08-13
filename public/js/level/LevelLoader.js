@@ -151,12 +151,7 @@ class LevelLoader {
     this.loading = true;
     this.playable = playable;
     if (playable) {
-      try {
-        window.CrazyGames.SDK.game.gameplayStart();
-      }
-      catch (e) {
-        console.log("CrazyGames SDK not found");
-      }
+      window.parent.postMessage('start game', '*');
     }
     // clear the enemy contraptions
     this.parent.enemyContraptions.forEach((enemyContraption) => {
@@ -538,12 +533,7 @@ class LevelLoader {
   clear(stop = false) {
     // stop the level
     if (stop) {
-      try {
-        window.CrazyGames.SDK.game.gameplayStop();
-      }
-      catch (e) {
-        console.log("CrazyGames SDK not found");
-      }
+      window.parent.postMessage('stop game', '*');
     }
     
     // Make a copy of the blocks array and iterate over it

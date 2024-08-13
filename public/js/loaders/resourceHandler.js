@@ -1,5 +1,4 @@
 // handles recording and loading player resources from local storage
-// FIXME: integrate the crazy games SDK for storing resources to player accounts instead of just local storage
 // FIXME: sync the resources with the player's account on the server
 import { playSound, setSong } from "../sounds/playSound.js";
 const worldCount = 4; // FIXME: this should be dynamic based on the number of worlds in the game

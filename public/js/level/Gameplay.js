@@ -121,13 +121,9 @@ class Gameplay {
   }
 
   completeLevel() {
-    // stop gameplay
-    try {
-      window.CrazyGames.SDK.game.gameplayStop();
-    }
-    catch (e) {
-      console.log("CrazyGames SDK not found");
-    }
+    window.parent.postMessage('stop game', '*');
+    window.parent.postMessage('midgame ad', '*');
+
     // give the player infinite health so that they don't die during the level complete animation
     this.parent.playerContraption.seat.hitPoints = Infinity;
     this.parent.LevelUI.destroyBackArrow();

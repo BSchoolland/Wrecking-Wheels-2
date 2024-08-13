@@ -85,6 +85,7 @@ const steps = [
   "Requesting account data",
 ];
 let progressBar = new ProgressBar(steps, barContainer);
+window.parent.postMessage('start load', '*');
 
 // Create an engine
 var engine = Matter.Engine.create();
@@ -149,6 +150,7 @@ function startGame() {
     setTimeout(startGame, 100);
     return;
   }
+  window.parent.postMessage('stop load', '*');
   // play the sound
   setSong("mainTheme");
 
